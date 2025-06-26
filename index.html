@@ -3,186 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SZ TOWING SERVICE - Jasa Derek dan Towing Profesional</title>
-    <!-- Tailwind CSS CDN untuk styling yang cepat dan responsif -->
+    <title>SZ TOWING SERVICE</title>
+    <!-- Tailwind CSS CDN untuk styling yang responsif dan cepat -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Menggunakan font Inter dari Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Warna latar belakang cerah */
-            color: #334155; /* Warna teks gelap */
+            background-color: #f0f2f5; /* Warna latar belakang lembut */
+            color: #333;
         }
-        /* Styling untuk bagian header dan hero section */
-        .hero-section {
-            background: linear-gradient(to right, #0d3b66, #2d6b9d); /* Gradasi warna biru gelap */
-            color: white;
-            padding: 8rem 0;
-            text-align: center;
-        }
-        .container {
+        .container-wrapper {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1rem;
+            padding: 1.5rem;
         }
-        .btn-primary {
-            background-color: #f67e7d; /* Warna merah muda cerah */
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px; /* Bentuk pil */
-            transition: background-color 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary:hover {
-            background-color: #eb5e5e; /* Warna merah muda lebih gelap saat hover */
-        }
-        .input-field {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border-radius: 0.5rem;
-            border: 1px solid #cbd5e1; /* Warna border abu-abu */
-            background-color: white;
+        .section-title {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #1a202c; /* text-gray-900 */
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
         .card {
-            background-color: white;
-            border-radius: 1rem; /* Sudut membulat */
+            background-color: #ffffff;
+            border-radius: 1rem; /* rounded-xl */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* shadow-lg */
             padding: 2rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+            margin-bottom: 2rem;
         }
-        .contact-info a {
-            color: #0d3b66; /* Warna biru gelap untuk tautan */
-            text-decoration: none;
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd5e0; /* border-gray-300 */
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        .btn-primary {
+            background-color: #2563eb; /* bg-blue-600 */
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-weight: 600; /* font-semibold */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+        }
+        .map-container {
+            border-radius: 1rem; /* rounded-xl */
+            overflow: hidden; /* Penting untuk radius sudut pada iframe */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="antialiased">
+    <div class="container-wrapper">
+        <!-- Header Section -->
+        <header class="bg-blue-700 text-white p-6 rounded-xl shadow-lg mb-8 text-center">
+            <h1 class="text-5xl font-extrabold mb-2">SZ TOWING SERVICE</h1>
+            <p class="text-xl font-light">Layanan Derek Kendaraan Terpercaya dan Cepat</p>
+            <div class="mt-4 text-lg">
+                <p>📞 <a href="tel:0895354088813" class="hover:underline">0895354088813</a></p>
+                <p>📧 <a href="mailto:sztowingservice@gmail.com" class="hover:underline">sztowingservice@gmail.com</a></p>
+            </div>
+        </header>
 
-    <!-- Header Section -->
-    <header class="bg-white shadow-sm py-4">
-        <div class="container flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-[#0d3b66] rounded-lg p-2">SZ TOWING SERVICE</h1>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="text-lg text-[#334155] hover:text-[#f67e7d] transition-colors duration-300">Beranda</a></li>
-                    <li><a href="#services" class="text-lg text-[#334155] hover:text-[#f67e7d] transition-colors duration-300">Layanan</a></li>
-                    <li><a href="#routes" class="text-lg text-[#334155] hover:text-[#f67e7d] transition-colors duration-300">Rute</a></li>
-                    <li><a href="#contact" class="text-lg text-[#334155] hover:text-[#f67e7d] transition-colors duration-300">Kontak</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h2 class="text-5xl font-extrabold mb-4 animate-fade-in">Jasa Towing & Derek Cepat Tanggap 24/7</h2>
-            <p class="text-xl mb-8 leading-relaxed">SZ Towing Service siap membantu Anda di mana pun dan kapan pun. Aman, Profesional, Terpercaya.</p>
-            <a href="#contact" class="btn-primary inline-block text-lg font-medium px-8 py-3 rounded-full hover:shadow-lg">Hubungi Kami Sekarang!</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="container text-center">
-            <h3 class="text-4xl font-bold mb-12 text-[#0d3b66]">Layanan Kami</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card p-6">
-                    <img src="https://placehold.co/100x100/f67e7d/ffffff?text=🚗" alt="Towing Mobil" class="mx-auto mb-4 w-24 h-24 rounded-full p-4 bg-gray-100">
-                    <h4 class="text-2xl font-semibold mb-3 text-[#0d3b66]">Towing Mobil</h4>
-                    <p class="text-gray-600">Layanan derek dan towing mobil pribadi, rusak, mogok, atau kecelakaan dengan armada modern.</p>
+        <!-- About Us / Services Section -->
+        <section class="card">
+            <h2 class="section-title">Tentang SZ Towing Service</h2>
+            <p class="text-lg text-center mb-6">
+                SZ Towing Service adalah penyedia jasa derek kendaraan profesional yang siap melayani Anda 24/7.
+                Kami mengutamakan kecepatan, keamanan, dan keandalan dalam setiap penanganan kendaraan.
+                Apapun jenis kendaraan Anda, kami siap membantu Anda di jalan.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Derek Mobil Pribadi</h3>
+                    <p class="text-gray-700">Penanganan cepat untuk sedan, hatchback, SUV, dan kendaraan pribadi lainnya.</p>
                 </div>
-                <div class="card p-6">
-                    <img src="https://placehold.co/100x100/f67e7d/ffffff?text=🏍️" alt="Towing Motor" class="mx-auto mb-4 w-24 h-24 rounded-full p-4 bg-gray-100">
-                    <h4 class="text-2xl font-semibold mb-3 text-[#0d3b66]">Towing Motor</h4>
-                    <p class="text-gray-600">Pengiriman motor besar, motor mogok, atau pemindahan motor antar kota dengan aman.</p>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Derek Truk Ringan</h3>
+                    <p class="text-gray-700">Layanan derek khusus untuk truk pikap, van, dan kendaraan komersial ringan.</p>
                 </div>
-                <div class="card p-6">
-                    <img src="https://placehold.co/100x100/f67e7d/ffffff?text=🚚" alt="Towing Kendaraan Berat" class="mx-auto mb-4 w-24 h-24 rounded-full p-4 bg-gray-100">
-                    <h4 class="text-2xl font-semibold mb-3 text-[#0d3b66]">Kendaraan Berat</h4>
-                    <p class="text-gray-600">Layanan derek untuk truk, bus, dan kendaraan berat lainnya dengan kapasitas yang memadai.</p>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Penanganan Kecelakaan</h3>
+                    <p class="text-gray-700">Bantuan derek profesional untuk kendaraan yang terlibat dalam kecelakaan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Bantuan Darurat</h3>
+                    <p class="text-gray-700">Mulai dari ban kempes hingga mesin mogok, kami siap membantu di lokasi.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Pengiriman Antar Kota</h3>
+                    <p class="text-gray-700">Layanan pengiriman kendaraan dengan aman ke berbagai kota tujuan.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                    <h3 class="text-xl font-semibold mb-2">Angkut Kendaraan Mogok</h3>
+                    <p class="text-gray-700">Layanan untuk kendaraan mogok atau tidak bisa jalan.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Routes/Map Section -->
-    <section id="routes" class="py-16 bg-gray-50">
-        <div class="container text-center">
-            <h3 class="text-4xl font-bold mb-12 text-[#0d3b66]">Cek Rute Towing Anda</h3>
-            <div class="card p-8 max-w-2xl mx-auto">
-                <p class="mb-6 text-gray-700">Masukkan titik penjemputan dan titik pemberhentian Anda untuk melihat rute di Google Maps.</p>
-                <div class="mb-4">
-                    <input type="text" id="pickupLocation" placeholder="Titik Penjemputan (mis: Jakarta Pusat)" class="input-field rounded-lg focus:ring-2 focus:ring-[#f67e7d] focus:border-transparent">
+        <!-- Towing Request Form Section -->
+        <section class="card">
+            <h2 class="section-title">Permintaan Jasa Towing</h2>
+            <form id="towingRequestForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Nama Lengkap:</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="Masukkan nama Anda" required>
                 </div>
-                <div class="mb-6">
-                    <input type="text" id="destinationLocation" placeholder="Titik Pemberhentian (mis: Bandung)" class="input-field rounded-lg focus:ring-2 focus:ring-[#f67e7d] focus:border-transparent">
+                <div>
+                    <label for="phone" class="block text-gray-700 text-sm font-semibold mb-2">Nomor Telepon:</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" value="0895354088813" required>
                 </div>
-                <button id="viewRouteBtn" class="btn-primary w-full text-lg font-medium px-8 py-3 rounded-full hover:shadow-lg">Lihat Rute di Google Maps</button>
-                <p class="text-sm text-gray-500 mt-4">Rute akan terbuka di tab/jendela baru Google Maps.</p>
+                <div class="md:col-span-2">
+                    <label for="pickupLocation" class="block text-gray-700 text-sm font-semibold mb-2">Lokasi Penjemputan (titik saat ini):</label>
+                    <input type="text" id="pickupLocation" name="pickupLocation" class="form-input" placeholder="Contoh: Jl. Sudirman No.10, Jakarta Pusat" required>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="dropoffLocation" class="block text-gray-700 text-sm font-semibold mb-2">Lokasi Pemberhentian (tujuan):</label>
+                    <input type="text" id="dropoffLocation" name="dropoffLocation" class="form-input" placeholder="Contoh: Bengkel ABC, Jl. Raya Bogor KM 20" required>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="vehicleType" class="block text-gray-700 text-sm font-semibold mb-2">Jenis Kendaraan:</label>
+                    <input type="text" id="vehicleType" name="vehicleType" class="form-input" placeholder="Contoh: Sedan Honda Civic, Truk Isuzu Elf" required>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="problem" class="block text-gray-700 text-sm font-semibold mb-2">Deskripsi Masalah (opsional):</label>
+                    <textarea id="problem" name="problem" rows="3" class="form-input" placeholder="Contoh: Ban kempes, mogok di jalan, kecelakaan"></textarea>
+                </div>
+                <div class="md:col-span-2 flex justify-center">
+                    <button type="submit" class="btn-primary">Kirim Permintaan Towing</button>
+                </div>
+            </form>
+            <div id="responseMessage" class="mt-6 p-4 rounded-lg text-center hidden"></div>
+        </section>
+
+        <!-- Google Maps Section -->
+        <section class="card">
+            <h2 class="section-title">Area Layanan Kami (Contoh Rute)</h2>
+            <p class="text-center mb-4 text-gray-700">
+                Berikut adalah contoh area layanan dan rute umum yang kami cakup. Untuk rute spesifik, silakan isi formulir di atas.
+            </p>
+            <div class="map-container relative w-full" style="padding-bottom: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.529809623838!2d106.8197775147699!3d-6.192534995514686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f592c3a5e8c1%3A0x6b8761a3d9b0f4f!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="absolute top-0 left-0"
+                ></iframe>
             </div>
-        </div>
-    </section>
+            <p class="text-center text-sm text-gray-500 mt-4">
+                *Peta ini adalah representasi area umum. Rute penjemputan dan pemberhentian akan ditentukan berdasarkan permintaan Anda.
+            </p>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container text-center">
-            <h3 class="text-4xl font-bold mb-12 text-[#0d3b66]">Hubungi Kami</h3>
-            <div class="card p-8 max-w-xl mx-auto contact-info">
-                <p class="text-xl mb-4 text-gray-700">Siap melayani Anda 24 jam sehari, 7 hari seminggu.</p>
-                <div class="mb-4">
-                    <p class="text-lg font-semibold">Telepon:</p>
-                    <a href="tel:+62895354088813" class="text-2xl block">+62 895-3540-88813</a> <!-- Nomor telepon yang Anda berikan -->
-                </div>
-                <div class="mb-4">
-                    <p class="text-lg font-semibold">WhatsApp:</p>
-                    <a href="https://wa.me/62895354088813" target="_blank" class="text-2xl block">Kirim Pesan WhatsApp</a> <!-- Nomor WhatsApp yang Anda berikan -->
-                </div>
-                <div class="mb-4">
-                    <p class="text-lg font-semibold">Email:</p>
-                    <a href="mailto:sztowingservice@gmail.com" class="text-2xl block">sztowingservice@gmail.com</a> <!-- Email yang Anda berikan -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-[#0d3b66] text-white py-8 mt-12">
-        <div class="container text-center">
-            <p>&copy; 2025 SZ Towing Service. Semua Hak Dilindungi.</p>
-            <p class="text-sm mt-2">Dibuat dengan ❤️ untuk layanan towing terbaik.</p>
-        </div>
-    </footer>
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white p-6 rounded-xl shadow-lg mt-8 text-center">
+            <p>&copy; 2025 SZ TOWING SERVICE. All rights reserved.</p>
+            <p class="mt-2">Hubungi kami untuk bantuan darurat 24/7!</p>
+        </footer>
+    </div>
 
     <script>
-        document.getElementById('viewRouteBtn').addEventListener('click', function() {
-            const pickup = document.getElementById('pickupLocation').value;
-            const destination = document.getElementById('destinationLocation').value;
+        document.getElementById('towingRequestForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form untuk refresh halaman
 
-            if (pickup && destination) {
-                // Menggunakan API Google Maps untuk membuat URL rute.
-                // Ini akan membuka tab baru di browser ke Google Maps dengan rute yang sudah ditentukan.
-                const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`;
-                window.open(googleMapsUrl, '_blank');
-            } else {
-                // Menampilkan pesan jika input kosong menggunakan modal sederhana (mengganti alert)
-                const messageBox = document.createElement('div');
-                messageBox.innerHTML = `
-                    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 1000;">
-                        <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); text-align: center;">
-                            <p style="margin-bottom: 20px;">Mohon lengkapi Titik Penjemputan dan Titik Pemberhentian.</p>
-                            <button onclick="this.parentNode.parentNode.remove()" style="background-color: #0d3b66; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer;">OK</button>
-                        </div>
-                    </div>
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const pickupLocation = document.getElementById('pickupLocation').value;
+            const dropoffLocation = document.getElementById('dropoffLocation').value;
+            const vehicleType = document.getElementById('vehicleType').value;
+            const problem = document.getElementById('problem').value;
+            const responseMessageDiv = document.getElementById('responseMessage');
+
+            try {
+                // Pesan untuk WhatsApp
+                let whatsappMessage = `Halo SZ Towing Service,\n`;
+                whatsappMessage += `Saya ${name} ingin memesan jasa towing.\n\n`;
+                whatsappMessage += `Detail Permintaan:\n`;
+                whatsappMessage += `Kendaraan: ${vehicleType}\n`;
+                whatsappMessage += `Lokasi Penjemputan: ${pickupLocation}\n`;
+                whatsappMessage += `Lokasi Pemberhentian: ${dropoffLocation}\n`;
+                if (problem) {
+                    whatsappMessage += `Masalah: ${problem}\n`;
+                }
+                whatsappMessage += `\nMohon bantuannya segera. Terima kasih.`;
+
+                // Encode pesan untuk URL WhatsApp
+                const encodedWhatsappMessage = encodeURIComponent(whatsappMessage);
+                // Nomor WhatsApp tujuan
+                const whatsappNumber = '62895354088813'; // Format internasional tanpa '+'
+                const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedWhatsappMessage}`;
+
+                // Pesan untuk Email
+                let emailSubject = `Permintaan Jasa Towing dari ${name}`;
+                let emailBody = `Halo SZ Towing Service,\n\n`;
+                emailBody += `Saya ${name} (${phone}) telah mengisi formulir permintaan jasa towing.\n\n`;
+                emailBody += `Berikut detail permintaan saya:\n`;
+                emailBody += `Jenis Kendaraan: ${vehicleType}\n`;
+                emailBody += `Lokasi Penjemputan: ${pickupLocation}\n`;
+                emailBody += `Lokasi Pemberhentian: ${dropoffLocation}\n`;
+                if (problem) {
+                    emailBody += `Deskripsi Masalah: ${problem}\n`;
+                }
+                emailBody += `\nMohon konfirmasi dan tindak lanjutnya. Terima kasih.`;
+
+                const encodedEmailBody = encodeURIComponent(emailBody);
+                const encodedEmailSubject = encodeURIComponent(emailSubject);
+                const emailAddress = 'sztowingservice@gmail.com';
+                const mailtoUrl = `mailto:${emailAddress}?subject=${encodedEmailSubject}&body=${encodedEmailBody}`;
+
+                // Menampilkan pesan respons
+                responseMessageDiv.classList.remove('hidden');
+                responseMessageDiv.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-400');
+                responseMessageDiv.innerHTML = `
+                    <p class="text-lg font-semibold">Permintaan Anda berhasil dikirim!</p>
+                    <p class="mt-2">Kami akan segera menghubungi Anda. Silakan klik tombol di bawah untuk konfirmasi via WhatsApp:</p>
+                    <a href="${whatsappUrl}" target="_blank" class="mt-4 inline-block bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">
+                        Konfirmasi Via WhatsApp
+                    </a>
+                    <p class="mt-4">Data juga akan terkirim ke email kami (${emailAddress}).</p>
                 `;
-                document.body.appendChild(messageBox);
+
+                // Menggulir ke pesan respons
+                responseMessageDiv.scrollIntoView({ behavior: 'smooth' });
+
+                // Opsional: Reset form setelah submit
+                // event.target.reset();
+
+            } catch (error) {
+                responseMessageDiv.classList.remove('hidden');
+                responseMessageDiv.classList.add('bg-red-100', 'text-red-800', 'border', 'border-red-400');
+                responseMessageDiv.innerHTML = `<p class="text-lg font-semibold">Terjadi kesalahan saat mengirim permintaan: ${error.message}</p>`;
+                console.error("Error submitting form:", error);
             }
         });
     </script>
-
 </body>
 </html>
